@@ -8,8 +8,7 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   //write your code here
   let randomNumber = Math.floor(Math.random() * 10) + 1;
-  document.querySelector("#excuse").innerHTML = generateExcuse;
-  console.log("Hello Rigo from the console! " + randomNumber);
+  document.querySelector("#excuse").innerHTML = generateExcuse();
 };
 
 let generateExcuse = function() {
@@ -24,18 +23,18 @@ let generateExcuse = function() {
     "while I was praying"
   ];
 
-  let whoindex = Math.floor(Math.random() * who.length) + 1;
-  let actionindex = Math.floor(Math.random() * action.length) + 1;
-  let whatindex = Math.floor(Math.random() * what.length) + 1;
-  let whenindex = Math.floor(Math.random() * when.length) + 1;
+  let whoindex = Math.floor(Math.random() * who.length);
+  let actionindex = Math.floor(Math.random() * action.length);
+  let whatindex = Math.floor(Math.random() * what.length);
+  let whenindex = Math.floor(Math.random() * when.length);
 
   return (
     who[whoindex] +
-    "" +
+    " " +
     action[actionindex] +
-    "" +
+    " " +
     what[whatindex] +
-    "" +
+    " " +
     when[whenindex]
   );
 };
