@@ -7,15 +7,15 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  let randomNumber = Math.floor(Math.random() * 10) + 1;
+  var randomNumber = Math.floor(Math.random() * 10) + 1;
   document.querySelector("#excuse").innerHTML = generateExcuse();
 };
 
-let generateExcuse = function() {
-  let who = ["The dog", "My grandma", "His turtle", "My bird"];
-  let action = ["ate", "peed", "crushed", "broke"];
-  let what = ["my homework", "the keys", "the car"];
-  let when = [
+var generateExcuse = function() {
+  var who = ["The dog", "My grandma", "His turtle", "My bird"];
+  var action = ["ate", "peed", "crushed", "broke"];
+  var what = ["my homework", "the keys", "the car"];
+  var when = [
     "before the class",
     "right on time",
     "when I finished",
@@ -23,10 +23,10 @@ let generateExcuse = function() {
     "while I was praying"
   ];
 
-  let whoindex = Math.floor(Math.random() * who.length);
-  let actionindex = Math.floor(Math.random() * action.length);
-  let whatindex = Math.floor(Math.random() * what.length);
-  let whenindex = Math.floor(Math.random() * when.length);
+  var whoindex = Math.floor(Math.random() * who.length);
+  var actionindex = Math.floor(Math.random() * action.length);
+  var whatindex = Math.floor(Math.random() * what.length);
+  var whenindex = Math.floor(Math.random() * when.length);
 
   return (
     who[whoindex] +
